@@ -416,7 +416,6 @@ a {
 .modal-list {
 }
 .modal-item {
-  margin-bottom: 13px;
 }
 .modal-item:last-child {
   margin-bottom: 25px;
@@ -426,11 +425,31 @@ a {
   margin-bottom: 5px;
   color: #665822;
 }
+
+.modal-label.no-valid {
+  color: red;
+}
+
+.modal-label.no-valid .modal-input {
+  border: 1px solid red;
+}
+
+.error {
+  display: block;
+  color: red;
+  margin-top: 5px;
+}
+
 .modal-input {
   width: 100%;
   height: 40px;
   padding: 10px;
   color: #665822;
+}
+
+.modal-input:focus {
+  outline: none;
+  border: 2px solid #665822;
 }
 .button {
 }
@@ -440,6 +459,14 @@ a {
   color: #665822;
   border: 2px solid #665822;
   background-color: #fff;
+
   outline: none;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-button:hover {
+  background-color: #665822;
+  color: #ffdc55;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

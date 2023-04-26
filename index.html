@@ -98,37 +98,55 @@
             <li class="modal-item">
               <label class="modal-label">
                 Имя
-                <input type="text" name="name" class="modal-input" />
+                <input type="text" name="name" id="name" class="modal-input" />
+                <span class="error"></span>
               </label>
             </li>
             <li class="modal-item">
               <label class="modal-label">
                 Почта
-                <input type="email" name="email" class="modal-input" />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="modal-input"
+                />
+                <span class="error"></span>
               </label>
             </li>
             <li class="modal-item">
               <label class="modal-label">
                 Телефон
-                <input type="tel" name="tel" class="modal-input" />
+                <input type="tel" name="tel" id="tel" class="modal-input" />
+                <span class="error"></span>
               </label>
             </li>
             <li class="modal-item">
               <label class="modal-label">
                 Пароль
-                <input type="password" name="password" class="modal-input" />
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="modal-input"
+                />
+                <span class="error"></span>
               </label>
             </li>
             <li class="modal-item">
               <label class="modal-label">
                 Повторите пароль
-                <input type="password" name="password" class="modal-input" />
+                <input
+                  type="password"
+                  name="password"
+                  id="repeat-pass"
+                  class="modal-input"
+                />
+                <span class="error"></span>
               </label>
             </li>
           </ul>
-          <button type="submit" class="button modal-button">
-            Зарегистрироваться
-          </button>
+          <button type="submit" class="modal-button">Зарегистрироваться</button>
         </form>
         <button type="button" class="close-button" data-modal-close>
           <svg class="modal-icon" width="16" height="16">
@@ -137,7 +155,8 @@
         </button>
       </div>
     </div>
-    <script src="./js/menu.js"></script>
-    <script src="./js/script.js"></script>
+    <script type="module" src="./js/validate.js"></script>
+    <script type="module" src="./js/menu.js"></script>
+    <script type="module" src="./js/script.js"></script>
   </body>
 </html>
