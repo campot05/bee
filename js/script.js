@@ -26,19 +26,34 @@ refs.beeLink.addEventListener('click', () => {
   refs.menuSubList.classList.toggle('show');
 });
 
-const openModal = () => {
-  const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
-  };
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+// modal
 
-  function toggleModal() {
-    document.body.classList.toggle('modal-open');
-    refs.modal.classList.toggle('is-hidden');
+const openModalBtn = document.querySelector('[data-modal-open]');
+const closeModalBtn = document.querySelector('[data-modal-close]');
+const modal = document.querySelector('[data-modal]');
+
+openModalBtn.addEventListener('click', toggleModal);
+closeModalBtn.addEventListener('click', toggleModal);
+modal.addEventListener('click', closeModal);
+
+function toggleModal() {
+  document.body.classList.toggle('modal-open');
+  modal.classList.toggle('is-hidden');
+  if (!modal.classList.contains('is-hidden')) {
+    document.addEventListener('keydown', handleKeyDown);
+  } else {
+    document.removeEventListener('keydown', handleKeyDown);
   }
-};
+}
 
-openModal();
+function closeModal(e) {
+  if (e.target === e.currentTarget) {
+    toggleModal();
+  }
+}
+
+function handleKeyDown(e) {
+  if (e.key === 'Escape') {
+    toggleModal();
+  }
+}
