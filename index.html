@@ -90,6 +90,84 @@
       </div>
     </header>
 
+    <main>
+      <section class="filter">
+        <div class="container">
+          <h1 class="filter-title">Фильтр результатов</h1>
+          <form class="filter-form form">
+            <div class="form-wrapper">
+              <div class="price">
+                <h2 class="form-title">Цена</h2>
+                <div class="price-input">
+                  <label class="price-field">
+                    <span>от</span>
+                    <input type="number" class="price-input-min" value="0" />
+                    <svg width="15" height="25" class="price-svg">
+                      <use href="./image/sprite.svg#icon-dollar"></use>
+                    </svg>
+                  </label>
+
+                  <label class="price-field">
+                    <span>до</span>
+                    <input type="number" class="price-input-max" value="500" />
+                    <svg width="15" height="25" class="price-svg">
+                      <use href="./image/sprite.svg#icon-dollar"></use>
+                    </svg>
+                  </label>
+                </div>
+                <div class="slider">
+                  <div class="progress"></div>
+                </div>
+                <div class="range-input">
+                  <input
+                    type="range"
+                    class="range-min"
+                    min="0"
+                    max="500"
+                    value="0"
+                    step="10"
+                  />
+                  <input
+                    type="range"
+                    class="range-max"
+                    min="0"
+                    max="500"
+                    value="500"
+                    step="10"
+                  />
+                </div>
+              </div>
+              <div class="bees">
+                <h2 class="form-title">Вид пчел</h2>
+                <div class="bees-list">
+                  <label class="bees-label">
+                    <input type="checkbox" class="bees-checkbox" disabled />
+                    <span class="bees-icon"></span>
+                    <span class="bees-text">Большая индийская пчела</span>
+                  </label>
+                  <label class="bees-label">
+                    <input type="checkbox" class="bees-checkbox" disabled />
+                    <span class="bees-icon"></span>
+                    <span class="bees-text">Медоносная пчела</span>
+                  </label>
+                  <label class="bees-label">
+                    <input type="checkbox" class="bees-checkbox" />
+                    <span class="bees-icon"></span>
+                    <span class="bees-text">Индийская пчела</span>
+                  </label class="bees-label">
+                  <label>
+                    <input type="checkbox" class="bees-checkbox" />
+                    <span class="bees-icon"></span>
+                   <span class="bees-text"> Арликовая пчела</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <form class="modal-form" autocomplete="off">
@@ -155,8 +233,6 @@
         </button>
       </div>
     </div>
-    <script type="module" src="./js/validate.js"></script>
-    <script type="module" src="./js/menu.js"></script>
-    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
