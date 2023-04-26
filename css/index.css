@@ -32,6 +32,8 @@ a {
   margin: 0 auto;
 }
 
+/* ============= HEADER ============ */
+
 .header {
   background-color: #e1c34b;
 }
@@ -317,4 +319,127 @@ a {
   .menu-link-bee.is-open .menu-sub-list {
     display: block;
   }
+}
+
+/* ============= MODAL ============ */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  overflow-y: scroll;
+  padding: 94px 15px;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) perspective(500px) translateY(-100%)
+    rotateX(45deg);
+}
+
+.modal {
+  position: relative;
+  padding: 40px;
+  background: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: transform 500ms ease;
+}
+
+@media screen and (min-width: 478.98px) {
+  .modal {
+    width: 450px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 767.98px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) perspective(500px) translateY(0%)
+      rotateX(0deg);
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1279.98px) {
+  .model {
+    width: 528px;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  background-color: #ffffff;
+  cursor: pointer;
+  fill: #665822;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-icon {
+  color: currentColor;
+}
+
+.modal-form {
+}
+.modal-title {
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #665822;
+}
+.modal-list {
+}
+.modal-item {
+  margin-bottom: 13px;
+}
+.modal-item:last-child {
+  margin-bottom: 25px;
+}
+.modal-label {
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: #665822;
+}
+.modal-input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  color: #665822;
+}
+.button {
+}
+.modal-button {
+  width: 100%;
+  padding: 10px;
+  color: #665822;
+  border: 2px solid #665822;
+  background-color: #fff;
+  outline: none;
+  cursor: pointer;
 }
