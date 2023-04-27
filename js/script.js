@@ -26,73 +26,49 @@ refs.beeLink.addEventListener('click', () => {
   refs.menuSubList.classList.toggle('show');
 });
 
-// modal
+// select
 
-const openModalBtn = document.querySelector('[data-modal-open]');
-const closeModalBtn = document.querySelector('[data-modal-close]');
-const modal = document.querySelector('[data-modal]');
+new MultiSelectTag('bees'); // id
 
-openModalBtn.addEventListener('click', toggleModal);
-closeModalBtn.addEventListener('click', toggleModal);
-modal.addEventListener('click', closeModal);
+// radiobutton cloth
 
-function toggleModal() {
-  document.body.classList.toggle('modal-open');
-  modal.classList.toggle('is-hidden');
-  if (!modal.classList.contains('is-hidden')) {
-    document.addEventListener('keydown', handleKeyDown);
+const radioButtons = document.querySelectorAll('input[name="cloth"]');
+
+let previousChecked = null;
+
+function handleRadioChange(event) {
+  const currentChecked = event.target;
+
+  if (previousChecked !== null && currentChecked !== previousChecked) {
+    previousChecked.parentNode.style = '';
+  }
+
+  if (currentChecked.checked) {
+    currentChecked.parentNode.style = 'background-color: #FEEDA9';
+    previousChecked = currentChecked;
   } else {
-    document.removeEventListener('keydown', handleKeyDown);
+    currentChecked.parentNode.style = '';
+    previousChecked = null;
   }
 }
 
-function closeModal(e) {
-  if (e.target === e.currentTarget) {
-    toggleModal();
-  }
-}
-
-function handleKeyDown(e) {
-  if (e.key === 'Escape') {
-    toggleModal();
-  }
-}
-
-const rangeInput = document.querySelectorAll('.range-input input'),
-  priceInput = document.querySelectorAll('.price-input input'),
-  range = document.querySelector('.slider .progress');
-let priceGap = 10;
-priceInput.forEach((input) => {
-  input.addEventListener('input', (e) => {
-    let minPrice = parseInt(priceInput[0].value),
-      maxPrice = parseInt(priceInput[1].value);
-
-    if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
-      if (e.target.className === 'price-input-min') {
-        rangeInput[0].value = minPrice;
-        range.style.left = (minPrice / rangeInput[0].max) * 100 + '%';
-      } else {
-        rangeInput[1].value = maxPrice;
-        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + '%';
-      }
-    }
-  });
+radioButtons.forEach((button) => {
+  button.addEventListener('change', handleRadioChange);
 });
-rangeInput.forEach((input) => {
-  input.addEventListener('input', (e) => {
-    let minVal = parseInt(rangeInput[0].value),
-      maxVal = parseInt(rangeInput[1].value);
-    if (maxVal - minVal < priceGap) {
-      if (e.target.className === 'range-min') {
-        rangeInput[0].value = maxVal - priceGap;
-      } else {
-        rangeInput[1].value = minVal + priceGap;
-      }
-    } else {
-      priceInput[0].value = minVal;
-      priceInput[1].value = maxVal;
-      range.style.left = (minVal / rangeInput[0].max) * 100 + '%';
-      range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + '%';
-    }
-  });
+
+// form
+
+const form = document.querySelector('.filter-form');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  console.log('submit');
+
+  form.reset();
+});
+
+form.addEventListener('click', (e) => {
+  if (e.target.textContent === 'Сбросить') {
+    location.reload();
+  }
 });
