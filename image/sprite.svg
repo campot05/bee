@@ -88,8 +88,12 @@
 <symbol id="icon-minus" viewBox="0 0 32 32">
 <path fill="none" stroke="#665822" style="stroke: var(--color1, #665822)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="0.9412" d="M0 15.972h31.944"></path>
 </symbol>
-<symbol id="icon--4arrow" viewBox="0 0 45 32">
-<path d="M40.554 0l4.454 4.713-29.502 27.287-0.236-0.212-6.174-6.622-9.096-9.732 4.713-4.171 10.722 11.971z"></path>
+<symbol id="icon-plusw" viewBox="0 0 32 32">
+<path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="0.9412" d="M0 15.972h31.944"></path>
+<path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="0.9412" d="M15.972 31.944v-31.944"></path>
+</symbol>
+<symbol id="icon-minusw" viewBox="0 0 32 32">
+<path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="0.9412" d="M0 15.972h31.944"></path>
 </symbol>
 </defs>
 </svg>

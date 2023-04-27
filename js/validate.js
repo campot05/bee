@@ -90,3 +90,24 @@ const validateInputs = () => {
   }
   return isValidForm;
 };
+
+// select
+
+new MultiSelectTag('bees'); // id
+
+// form
+
+const form = document.querySelector('.filter-form');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  console.log('submit');
+
+  form.reset();
+});
+
+form.addEventListener('click', (e) => {
+  if (e.target.textContent === 'Сбросить') {
+    location.reload();
+  }
+});

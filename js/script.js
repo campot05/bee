@@ -26,10 +26,6 @@ refs.beeLink.addEventListener('click', () => {
   refs.menuSubList.classList.toggle('show');
 });
 
-// select
-
-new MultiSelectTag('bees'); // id
-
 // radiobutton cloth
 
 const radioButtons = document.querySelectorAll('input[name="cloth"]');
@@ -54,21 +50,4 @@ function handleRadioChange(event) {
 
 radioButtons.forEach((button) => {
   button.addEventListener('change', handleRadioChange);
-});
-
-// form
-
-const form = document.querySelector('.filter-form');
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  console.log('submit');
-
-  form.reset();
-});
-
-form.addEventListener('click', (e) => {
-  if (e.target.textContent === 'Сбросить') {
-    location.reload();
-  }
 });

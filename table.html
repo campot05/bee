@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./css/index.css" />
     <title>Bee</title>
   </head>
-  <body>
+  <body data-body>
     <header class="header">
       <button
         type="button"
@@ -26,10 +26,11 @@
       >
         <svg
           aria-expanded="false"
-          aria-controls="menu-container"
+          aria-controls="header-menu"
           aria-label="Мобильное меню"
           width="25"
           height="25"
+          role="navigation"
         >
           <use class="icon-burger" href="./image/sprite.svg#icon-burger"></use>
           <use class="icon-cross" href="./image/sprite.svg#icon-cross"></use>
@@ -89,5 +90,249 @@
         </nav>
       </div>
     </header>
+    <main>
+      <section class="tabs">
+        <div class="container">
+          <h1 class="tabs-title">Таблица данных</h1>
+          <div class="tabs-item">
+            <a href="#tab1" class="table-list-link" id="table1">
+              <svg class="table-icon" width="33" height="33">
+                <use
+                  class="table-icon-plus"
+                  href="./image/sprite.svg#icon-plusw"
+                ></use>
+                <use
+                  class="table-icon-minus"
+                  href="./image/sprite.svg#icon-minusw"
+                ></use>
+              </svg>
+              <span class="table-list-text">№125548</span>
+              <span class="table-list-date">12.03.2022</span>
+            </a>
+            <table class="tabs-table" id="tab1">
+              <thead>
+                <tr>
+                  <th>Вид пчел</th>
+                  <th>Волосатость</th>
+                  <th>Одежда</th>
+                  <th>Цена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Индийская пчела</td>
+                  <td>Индийская пчела</td>
+                  <td class="table-svg">
+                    <svg width="35" height="23">
+                      <use href="./image/sprite.svg#icon-jacket"></use>
+                    </svg>
+                  </td>
+                  <td class="table-dollar">
+                    70
+                    <svg class="table-price" width="10" height="20">
+                      <use href="./image/sprite.svg#icon-dollar"></use>
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Индийская пчела</td>
+                  <td>Индийская пчела</td>
+                  <td class="table-svg">
+                    <svg width="35" height="23">
+                      <use href="./image/sprite.svg#icon-jacket"></use>
+                    </svg>
+                  </td>
+                  <td class="table-dollar">
+                    70
+                    <svg class="table-price" width="10" height="20">
+                      <use href="./image/sprite.svg#icon-dollar"></use>
+                    </svg>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="#tab2" class="table-list-link" id="table2">
+              <svg class="table-icon" width="33" height="33">
+                <use
+                  class="table-icon-plus"
+                  href="./image/sprite.svg#icon-plusw"
+                ></use>
+                <use
+                  class="table-icon-minus"
+                  href="./image/sprite.svg#icon-minusw"
+                ></use>
+              </svg>
+              <span class="table-list-text">№125548</span>
+              <span class="table-list-date">12.03.2022</span>
+            </a>
+            <table class="tabs-table" id="tab2">
+              <thead>
+                <tr>
+                  <th>Вид пчел</th>
+                  <th>Волосатость</th>
+                  <th>Одежда</th>
+                  <th>Цена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Индийская пчела</td>
+                  <td>Индийская пчела</td>
+                  <td class="table-svg">
+                    <svg width="35" height="23">
+                      <use href="./image/sprite.svg#icon-jacket"></use>
+                    </svg>
+                  </td>
+                  <td class="table-dollar">
+                    70
+                    <svg class="table-price" width="10" height="20">
+                      <use href="./image/sprite.svg#icon-dollar"></use>
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Индийская пчела</td>
+                  <td>Индийская пчела</td>
+                  <td class="table-svg">
+                    <svg width="35" height="23">
+                      <use href="./image/sprite.svg#icon-jacket"></use>
+                    </svg>
+                  </td>
+                  <td class="table-dollar">
+                    70
+                    <svg class="table-price" width="10" height="20">
+                      <use href="./image/sprite.svg#icon-dollar"></use>
+                    </svg>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="#tab3" class="table-list-link" id="table3">
+              <svg class="table-icon" width="33" height="33">
+                <use
+                  class="table-icon-plus"
+                  href="./image/sprite.svg#icon-plusw"
+                ></use>
+                <use
+                  class="table-icon-minus"
+                  href="./image/sprite.svg#icon-minusw"
+                ></use>
+              </svg>
+              <span class="table-list-text">№125548</span>
+              <span class="table-list-date">12.03.2022</span>
+            </a>
+            <table class="tabs-table" id="tab3">
+              <thead>
+                <tr>
+                  <th>Вид пчел</th>
+                  <th>Волосатость</th>
+                  <th>Одежда</th>
+                  <th>Цена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Индийская пчела</td>
+                  <td>Индийская пчела</td>
+                  <td class="table-svg">
+                    <svg width="35" height="23">
+                      <use href="./image/sprite.svg#icon-jacket"></use>
+                    </svg>
+                  </td>
+                  <td class="table-dollar">
+                    70
+                    <svg class="table-price" width="10" height="20">
+                      <use href="./image/sprite.svg#icon-dollar"></use>
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Индийская пчела</td>
+                  <td>Индийская пчела</td>
+                  <td class="table-svg">
+                    <svg width="35" height="23">
+                      <use href="./image/sprite.svg#icon-jacket"></use>
+                    </svg>
+                  </td>
+                  <td class="table-dollar">
+                    70
+                    <svg class="table-price" width="10" height="20">
+                      <use href="./image/sprite.svg#icon-dollar"></use>
+                    </svg>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <form class="modal-form" autocomplete="off">
+          <h2 class="modal-title">Зарегистрируйтесь</h2>
+          <ul class="modal-list">
+            <li class="modal-item">
+              <label class="modal-label">
+                Имя
+                <input type="text" name="name" id="name" class="modal-input" />
+                <span class="error"></span>
+              </label>
+            </li>
+            <li class="modal-item">
+              <label class="modal-label">
+                Почта
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="modal-input"
+                />
+                <span class="error"></span>
+              </label>
+            </li>
+            <li class="modal-item">
+              <label class="modal-label">
+                Телефон
+                <input type="tel" name="tel" id="tel" class="modal-input" />
+                <span class="error"></span>
+              </label>
+            </li>
+            <li class="modal-item">
+              <label class="modal-label">
+                Пароль
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="modal-input"
+                />
+                <span class="error"></span>
+              </label>
+            </li>
+            <li class="modal-item">
+              <label class="modal-label">
+                Повторите пароль
+                <input
+                  type="password"
+                  name="password"
+                  id="repeat-pass"
+                  class="modal-input"
+                />
+                <span class="error"></span>
+              </label>
+            </li>
+          </ul>
+          <button type="submit" class="modal-button">Зарегистрироваться</button>
+        </form>
+        <button type="button" class="close-button" data-modal-close>
+          <svg class="modal-icon" width="16" height="16">
+            <use href="./image/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script type="module" src="./js/table.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script> -->
   </body>
 </html>
