@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Bee</title>
+  </head>
+  <body>
+    <header class="header">
+      <button
+        type="button"
+        class="menu-button"
+        data-menu-button
+        aria-expanded="false"
+      >
+        <svg
+          aria-expanded="false"
+          aria-controls="menu-container"
+          aria-label="Мобильное меню"
+          width="25"
+          height="25"
+        >
+          <use class="icon-burger" href="./image/sprite.svg#icon-burger"></use>
+          <use class="icon-cross" href="./image/sprite.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <div class="container header-container">
+        <a href="./index.html" class="header-logo">
+          <svg width="100" height="40">
+            <use class="icon-burger" href="./image/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
+        <nav class="header-menu menu">
+          <ul class="header-menu-list">
+            <li class="menu-item">
+              <a href="#" class="menu-link menu-link-bee"
+                >Пчелы <span class="menu-arrow"></span>
+                <svg class="menu-plus" width="33" height="33">
+                  <use
+                    class="icon-plus"
+                    href="./image/sprite.svg#icon-plus"
+                  ></use>
+                  <use
+                    class="icon-minus"
+                    href="./image/sprite.svg#icon-minus"
+                  ></use>
+                </svg>
+              </a>
+              <ul class="menu-sub-list">
+                <li>
+                  <a href="#" class="menu-sub-link">Индийская пчела</a>
+                  <ul class="menu-color-list">
+                    <li><a href="#" class="menu-color-link">Красная</a></li>
+                    <li><a href="#" class="menu-color-link">Розовая</a></li>
+                    <li><a href="#" class="menu-color-link">Черная</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="menu-sub-link">Арликовая пчела </a>
+                  <ul class="menu-color-list">
+                    <li><a href="#" class="menu-color-link">Красная</a></li>
+                    <li><a href="#" class="menu-color-link">Розовая</a></li>
+                    <li><a href="#" class="menu-color-link">Черная</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">Дом пчелы</a>
+            </li>
+            <li class="menu-item"><a href="#" class="menu-link">Соты</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Мед</a></li>
+            <li class="menu-item">
+              <a href="./table.html" class="menu-link">Таблица данных</a>
+            </li>
+          </ul>
+          <a href="#" class="header-register" data-modal-open>Регистрация</a>
+        </nav>
+      </div>
+    </header>
+  </body>
+</html>
